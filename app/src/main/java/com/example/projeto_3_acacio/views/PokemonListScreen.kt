@@ -4,10 +4,7 @@ import android.util.Log
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyVerticalGrid
 import androidx.compose.foundation.lazy.items
@@ -92,25 +89,18 @@ fun PokemonEntry(
             AsyncImage(
                 modifier = Modifier
                     .fillMaxWidth()
+                    .height(200.dp)
                     .clip(RectangleShape)
                     .onGloballyPositioned {
                         width.value = it.size.width / density
                         height.value = it.size.height / density
                     },
-
                 model = ImageRequest.Builder(LocalContext.current)
                     .data(pokemon.sprite)
                     .crossfade(true)
                     .build(),
-
                 error = painterResource(R.drawable.pokeball),
-
                 placeholder = painterResource(R.drawable.pokeball),
-
-                onError = {
-                  Log.d("Image Error", it.result.throwable.toString())
-                },
-
                 contentDescription = pokemon.name,
                 contentScale = ContentScale.Crop
             )

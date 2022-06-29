@@ -23,7 +23,7 @@ class PokemonRepository(private val pokemonDao: PokemonDao) {
         withContext(Dispatchers.IO) {
             val pokemons = mutableListOf<SourcePokemon>()
 
-            for (i in 1..10) {
+            for (i in 1..20) {
                 pokemons.add(PokeApi.retrofitService.getPokemon(i.toString())[0])
             }
 

@@ -15,6 +15,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.graphics.Color.Companion.LightGray
+import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -52,20 +53,12 @@ fun Form(
                 .size(400.dp)
                 .clip(RectangleShape)
                 .padding(horizontal = 12.dp, vertical = 6.dp),
-
             model = ImageRequest.Builder(LocalContext.current)
                 .data(pokemon.sprite)
                 .crossfade(true)
                 .build(),
-
             error = painterResource(R.drawable.pokeball),
-
             placeholder = painterResource(R.drawable.pokeball),
-
-            onError = {
-                Log.d("Image Error", it.result.throwable.toString())
-            },
-
             contentDescription = pokemon.name,
             contentScale = ContentScale.Crop
         )
@@ -75,13 +68,13 @@ fun Form(
                 .fillMaxWidth()
                 .padding(horizontal = 12.dp, vertical = 6.dp),
             colors = TextFieldDefaults.outlinedTextFieldColors(
-                unfocusedBorderColor = Gray,
-                focusedBorderColor = LightGray,
-                unfocusedLabelColor = Gray,
-                focusedLabelColor = LightGray,
-                cursorColor = LightGray
+                unfocusedBorderColor = White,
+                focusedBorderColor = White,
+                unfocusedLabelColor = White,
+                focusedLabelColor = White,
+                cursorColor = White
             ),
-            textStyle = TextStyle(color = Color.White, fontSize = 16.sp),
+            textStyle = TextStyle(color = White, fontSize = 16.sp),
             label = {
                 Text(text = "Number", fontWeight = FontWeight.Bold, fontSize = 14.sp)
             },
@@ -95,13 +88,13 @@ fun Form(
                 .fillMaxWidth()
                 .padding(horizontal = 12.dp, vertical = 6.dp),
             colors = TextFieldDefaults.outlinedTextFieldColors(
-                unfocusedBorderColor = Gray,
-                focusedBorderColor = LightGray,
-                unfocusedLabelColor = Gray,
-                focusedLabelColor = LightGray,
-                cursorColor = LightGray
+                unfocusedBorderColor = White,
+                focusedBorderColor = White,
+                unfocusedLabelColor = White,
+                focusedLabelColor = White,
+                cursorColor = White
             ),
-            textStyle = TextStyle(color = Color.White, fontSize = 16.sp),
+            textStyle = TextStyle(color = White, fontSize = 16.sp),
             label = {
                 Text(text = "Name", fontWeight = FontWeight.Bold, fontSize = 14.sp)
             },
@@ -115,13 +108,13 @@ fun Form(
                 .fillMaxWidth()
                 .padding(horizontal = 12.dp, vertical = 6.dp),
             colors = TextFieldDefaults.outlinedTextFieldColors(
-                unfocusedBorderColor = Gray,
-                focusedBorderColor = LightGray,
-                unfocusedLabelColor = Gray,
-                focusedLabelColor = LightGray,
-                cursorColor = LightGray
+                unfocusedBorderColor = White,
+                focusedBorderColor = White,
+                unfocusedLabelColor = White,
+                focusedLabelColor = White,
+                cursorColor = White
             ),
-            textStyle = TextStyle(color = Color.White, fontSize = 16.sp),
+            textStyle = TextStyle(color = White, fontSize = 16.sp),
             label = {
                 Text(text = "Generation", fontWeight = FontWeight.Bold, fontSize = 14.sp)
             },
@@ -136,13 +129,13 @@ fun Form(
                 .fillMaxWidth()
                 .padding(horizontal = 12.dp, vertical = 6.dp),
             colors = TextFieldDefaults.outlinedTextFieldColors(
-                unfocusedBorderColor = Gray,
-                focusedBorderColor = LightGray,
-                unfocusedLabelColor = Gray,
-                focusedLabelColor = LightGray,
-                cursorColor = LightGray
+                unfocusedBorderColor = White,
+                focusedBorderColor = White,
+                unfocusedLabelColor = White,
+                focusedLabelColor = White,
+                cursorColor = White
             ),
-            textStyle = TextStyle(color = Color.White, fontSize = 16.sp),
+            textStyle = TextStyle(color = White, fontSize = 16.sp),
             label = {
                 Text(text = "Type1", fontWeight = FontWeight.Bold, fontSize = 14.sp)
             },
@@ -157,13 +150,13 @@ fun Form(
                     .fillMaxWidth()
                     .padding(horizontal = 12.dp, vertical = 6.dp),
                 colors = TextFieldDefaults.outlinedTextFieldColors(
-                    unfocusedBorderColor = Gray,
-                    focusedBorderColor = LightGray,
-                    unfocusedLabelColor = Gray,
-                    focusedLabelColor = LightGray,
-                    cursorColor = LightGray
+                    unfocusedBorderColor = White,
+                    focusedBorderColor = White,
+                    unfocusedLabelColor = White,
+                    focusedLabelColor = White,
+                    cursorColor = White
                 ),
-                textStyle = TextStyle(color = Color.White, fontSize = 16.sp),
+                textStyle = TextStyle(color = White, fontSize = 16.sp),
                 label = {
                     Text(text = "Type2", fontWeight = FontWeight.Bold, fontSize = 14.sp)
                 },
@@ -179,13 +172,13 @@ fun Form(
                 .padding(horizontal = 12.dp, vertical = 6.dp)
                 .height(80.dp),
             colors = TextFieldDefaults.outlinedTextFieldColors(
-                unfocusedBorderColor = Gray,
-                focusedBorderColor = LightGray,
-                unfocusedLabelColor = Gray,
-                focusedLabelColor = LightGray,
-                cursorColor = LightGray
+                unfocusedBorderColor = White,
+                focusedBorderColor = White,
+                unfocusedLabelColor = White,
+                focusedLabelColor = White,
+                cursorColor = White
             ),
-            textStyle = TextStyle(color = Color.White, fontSize = 16.sp),
+            textStyle = TextStyle(color = White, fontSize = 16.sp),
             label = {
                 Text(text = "Description", fontWeight = FontWeight.Bold, fontSize = 14.sp)
             },
