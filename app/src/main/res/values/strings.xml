@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">projeto-3-acacio</string>
+    <string name="pokemon_list_screen">pokemon_list_screen</string>
+    <string name="pokemon_details_screen">pokemon_details_screen</string>
+</resources>
